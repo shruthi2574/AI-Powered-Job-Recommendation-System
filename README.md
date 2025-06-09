@@ -118,6 +118,7 @@ cd job-recommendation-system
    - cloud computing → https://cloud.google.com/learn  
 
 ---
+```
 
 ## 📂 Project Structure
 
@@ -131,7 +132,7 @@ job-recommendation-system/
 └── README.md
 
 ```
-
+```
 ---
 
 ## 🙋‍♀️ Author
