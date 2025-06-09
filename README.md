@@ -136,7 +136,3 @@ job-recommendation-system/
 Gugulothu Shruthi
 B.Tech, 3rd Year — Narayanamma Institute of Technology  
 ✉️ [gugulothushruthi@gmail.com](mailto:gugulothushruthi@gmail.com)
-
-
-
-
