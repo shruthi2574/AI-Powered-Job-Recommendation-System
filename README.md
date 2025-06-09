@@ -132,11 +132,12 @@ job-recommendation-system/
 
 ```
 ```
- 🙋‍♀️ Author
+## 🙋‍♀️ Author
 
-```
 Gugulothu Shruthi
-B.Tech,CSE—Narayanamma Institute of Technology  
+B.Tech, 3rd Year — Narayanamma Institute of Technology  
 ✉️ [gugulothushruthi@gmail.com](mailto:gugulothushruthi@gmail.com)
+
+---
 
 
