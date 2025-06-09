@@ -117,7 +117,6 @@ cd job-recommendation-system
    - big data → https://www.coursera.org/specializations/big-data  
    - cloud computing → https://cloud.google.com/learn  
 
----
 ```
 
 ## 📂 Project Structure
@@ -137,7 +136,7 @@ job-recommendation-system/
 
 ## 🙋‍♀️ Author
 
-**Gugulothu Shruthi**  
+Gugulothu Shruthi
 B.Tech,CSE—Narayanamma Institute of Technology  
 ✉️ [gugulothushruthi@gmail.com](mailto:gugulothushruthi@gmail.com)
 
