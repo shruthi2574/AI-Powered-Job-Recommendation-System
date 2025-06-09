@@ -134,6 +134,7 @@ job-recommendation-system/
 ```
  🙋‍♀️ Author
 
+```
 Gugulothu Shruthi
 B.Tech,CSE—Narayanamma Institute of Technology  
 ✉️ [gugulothushruthi@gmail.com](mailto:gugulothushruthi@gmail.com)
