@@ -132,7 +132,7 @@ job-recommendation-system/
 
 ```
 ```
-## 🙋‍♀️ Author
+ 🙋‍♀️ Author
 
 Gugulothu Shruthi
 B.Tech,CSE—Narayanamma Institute of Technology  
