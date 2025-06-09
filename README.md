@@ -132,8 +132,6 @@ job-recommendation-system/
 
 ```
 ```
-
-```
 ## 🙋‍♀️ Author
 
 Gugulothu Shruthi
