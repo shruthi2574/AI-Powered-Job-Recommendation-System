@@ -81,7 +81,7 @@ cd job-recommendation-system
    python job_recommender.py
    ```
 
----
+
 
 ## 💡 Example Output
 
@@ -133,7 +133,7 @@ job-recommendation-system/
 
 ```
 ```
----
+
 
 ## 🙋‍♀️ Author
 
@@ -141,5 +141,4 @@ job-recommendation-system/
 B.Tech,CSE—Narayanamma Institute of Technology  
 ✉️ [gugulothushruthi@gmail.com](mailto:gugulothushruthi@gmail.com)
 
----
 
