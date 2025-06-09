@@ -1,0 +1,63 @@
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+jobs = [
+    {"title": "Software Engineer", "skills": "python, java, algorithms, data structures, problem solving"},
+    {"title": "Data Scientist", "skills": "python, statistics, machine learning, data analysis, pandas"},
+    {"title": "Web Developer", "skills": "html, css, javascript, react, frontend"},
+    {"title": "Database Administrator", "skills": "sql, database design, performance tuning, backup"},
+    {"title": "System Analyst", "skills": "requirements gathering, system design, communication, documentation"},
+    {"title": "Machine Learning Engineer", "skills": "python, machine learning, deep learning, tensorflow, pytorch"},
+]
+
+# Learning resources dictionary
+learning_resources = {
+    "python": "https://www.learnpython.org/",
+    "java": "https://www.codecademy.com/learn/learn-java",
+    "algorithms": "https://www.geeksforgeeks.org/fundamentals-of-algorithms/",
+    "data structures": "https://www.programiz.com/dsa",
+    "machine learning": "https://www.coursera.org/learn/machine-learning",
+    "deep learning": "https://www.deeplearning.ai/",
+    "tensorflow": "https://www.tensorflow.org/tutorials",
+    "pytorch": "https://pytorch.org/tutorials/",
+    "html": "https://www.w3schools.com/html/",
+    "css": "https://www.w3schools.com/css/",
+    "javascript": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+    "react": "https://reactjs.org/tutorial/tutorial.html",
+    "sql": "https://www.w3schools.com/sql/",
+    "statistics": "https://www.khanacademy.org/math/statistics-probability",
+    "data analysis": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html",
+    "problem solving": "https://www.hackerrank.com/domains/tutorials/10-days-of-problem-solving"
+}
+
+df_jobs = pd.DataFrame(jobs)
+
+user_skills = input("Enter your skills (comma separated): ").lower()
+user_skills_set = set([skill.strip() for skill in user_skills.split(",")])
+
+documents = df_jobs['skills'].tolist()
+documents.append(user_skills)
+
+vectorizer = TfidfVectorizer()
+tfidf_matrix = vectorizer.fit_transform(documents)
+
+cosine_similarities = cosine_similarity(tfidf_matrix[-1], tfidf_matrix[:-1]).flatten()
+df_jobs['similarity_score'] = cosine_similarities
+
+recommended_jobs = df_jobs.sort_values(by='similarity_score', ascending=False)
+
+print("\nTop job recommendations for you based on your skills:")
+for i, row in recommended_jobs.head(5).iterrows():
+    job_skills_set = set([skill.strip() for skill in row['skills'].split(",")])
+    missing_skills = job_skills_set - user_skills_set
+
+    print(f"\n{row['title']} (Match Score: {row['similarity_score']:.2f})")
+    
+    if missing_skills:
+        print("  🔹 Skills you might want to learn:")
+        for skill in missing_skills:
+            resource = learning_resources.get(skill, "No resource found")
+            print(f"    - {skill.title()}: {resource}")
+    else:
+        print("  🎉 You have all the key skills for this job!")
